@@ -7,6 +7,8 @@ import { Oscar } from "./components/Oscar";
 import { Person } from "./components/Person";
 import { PersonsList } from "./components/PersonsList";
 import { Status } from "./components/Status";
+import { LogedIn } from "./components/state/LogedIn";
+import { User } from "./components/state/User";
 
 function App() {
   const personName = {
@@ -39,6 +41,8 @@ function App() {
       </Oscar>
       <Button handleClick={(event,id)=>{console.log('Button clicked', event, id)}}/>
       <Input value="test" handleChange={(event)=>console.log(event)}/>
+      <LogedIn />
+      <User />
     </div>
   );
 }
