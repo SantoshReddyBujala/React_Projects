@@ -7,8 +7,13 @@ import { Oscar } from "./components/Oscar";
 import { Person } from "./components/Person";
 import { PersonsList } from "./components/PersonsList";
 import { Status } from "./components/Status";
+import { Box } from "./components/context/Box";
+import { ThemeContextProvider } from "./components/context/ThemeContex";
+import { UserContextProvider } from "./components/context/UserContext";
+import { Counter } from "./components/state/Counter";
 import { LogedIn } from "./components/state/LogedIn";
-import { User } from "./components/state/User";
+import { User } from "./components/context/User";
+import { MoutableRef } from "./components/ref/MoutableRef";
 
 function App() {
   const personName = {
@@ -43,6 +48,14 @@ function App() {
       <Input value="test" handleChange={(event)=>console.log(event)}/>
       <LogedIn />
       <User />
+      <Counter />
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
+      <MoutableRef />
     </div>
   );
 }
