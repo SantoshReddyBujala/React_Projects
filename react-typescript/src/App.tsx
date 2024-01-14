@@ -45,6 +45,7 @@ function App() {
   ];
   return (
     <div className="App">
+      <h1>React Azure Deployment</h1>
       <Greet name="Santosh Reddy Bujala" version={18} isLogedin={true} />
       <Person name={personName} />
       <PersonsList names={nameList} />
